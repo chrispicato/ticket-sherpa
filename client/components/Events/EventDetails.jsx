@@ -7,7 +7,16 @@ const EventDetails = ({params: { eventName }, location: { query }}) => (
     <p>Start Date:{query.eventStartDateTime}</p>
     <p>End Date:{query.eventEndDateTime}</p>
     <p>Price: {query.price}</p>
-    <h4><Link 
+    <p>(((Description Placeholder)))</p>
+    <p>(((Street Address Placeholder)))</p>
+    <p>(((Address Line 2 Placeholder)))</p>
+    <p>(((City Placeholder)))</p>
+    <p>(((State Placeholder)))</p>
+    <p>(((Zip/Postal Code Placeholder)))</p>
+    <p>(((Country Placeholder)))</p>
+    <img src="" />
+
+    <h4><Link
       to={{ pathname:
         '/buyevent/' + eventName,
         query: {
