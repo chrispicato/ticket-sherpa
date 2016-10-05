@@ -9,7 +9,6 @@ export default class App extends Component {
     return (
       <div>
         <h1><Link to={'/'}>Tickether</Link></h1>
-        <SearchEventsContainer />
         <hr></hr>
         {this.props.children}
       </div>
