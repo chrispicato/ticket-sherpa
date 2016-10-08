@@ -10,7 +10,7 @@ export default class App extends Component {
       <div className="app">
         <div className="appHeader">
           <div className="logo">
-            <h1><Link to={'/'}>Ticket Sherpa</Link></h1>
+            <Link to={'/'}><img src={require('../../images/logo-small.png')} /></Link>
           </div>
           <div className="navComponent">
             <NavContainer />

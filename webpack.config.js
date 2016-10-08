@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const urlloader = require('url-loader');
+const fileloader = require('file-loader');
 const APP_DIR = path.resolve(__dirname, 'client');
 const SERVER_DIR = path.resolve(__dirname, 'server');
 
@@ -18,14 +20,20 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
-    loaders: [{
-      test: /\.json$/,
-      loader: 'json'
-    },
-    {
-      test: /\.jsx?/,
-      loaders: ['react-hot', 'babel'],
-      include: APP_DIR
-    }]
-  }
+    loaders: [
+      {
+        test: /\.json$/,
+        loader: 'json'
+      },
+      {
+        test: /\.jsx?/,
+        loaders: ['react-hot', 'babel'],
+        include: APP_DIR
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192',
+      },
+    ]
+  },
 };
